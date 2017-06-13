@@ -1,9 +1,15 @@
+import { UserService } from './services/user.service';
+import { cardServiceProvider } from './providers/card.service.provider';
+import { CardService } from './components/cards/card.service';
+import { LoggerService } from './services/logger.service';
+import { CardsComponent } from './components/cards/cards.component';
+
 import { HighlightDirective } from './shared/directives/highlight.directive';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CardsComponent } from './cards/cards.component';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +20,7 @@ import { CardsComponent } from './cards/cards.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [LoggerService, CardService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
