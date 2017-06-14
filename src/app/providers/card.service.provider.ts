@@ -11,7 +11,7 @@ export let cardServiceProvider = {
     
     provide: CardService, 
     useFactory:cardServiceFactory, 
-    deps:[LoggerService, UserService]
+    deps:[LoggerService, UserService] /** comments this line to see the error about cardServiceFactory with unknown parameters  */
 
 }
 

@@ -1,3 +1,4 @@
+import { UserService } from './../../services/user.service';
 import { cardServiceProvider } from './../../providers/card.service.provider';
 import { LoggerService } from './../../services/logger.service';
 import { CardService } from './card.service';
@@ -9,8 +10,8 @@ import { Card } from './card'
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.css'],
   providers:[
-    // CardService,
-    // LoggerService,
+    LoggerService,
+    UserService,
     cardServiceProvider
     ]
 })

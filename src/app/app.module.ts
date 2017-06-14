@@ -20,7 +20,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [LoggerService, CardService, UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
