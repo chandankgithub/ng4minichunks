@@ -1,7 +1,4 @@
-import { UserService } from './services/user.service';
-import { cardServiceProvider } from './providers/card.service.provider';
-import { CardService } from './components/cards/card.service';
-import { LoggerService } from './services/logger.service';
+import { carComponents, carServices } from './components/hierachial-di/cars.component';
 import { CardsComponent } from './components/cards/cards.component';
 
 import { HighlightDirective } from './shared/directives/highlight.directive';
@@ -15,12 +12,15 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
     HighlightDirective,
-    CardsComponent
+    CardsComponent,
+    carComponents,
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    carServices
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
