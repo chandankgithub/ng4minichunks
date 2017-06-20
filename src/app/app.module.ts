@@ -6,7 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
-
+import { NgOnChangesParentComponent } from './ng-lifecycles/ngOnChanges/parent-component/ngonchanges-parent.component';
+import { NgOnchangesChildComponent } from "app/ng-lifecycles/ngOnChanges/children-component/ngonchanges-child.component";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,8 @@ import { AppComponent } from './app.component';
     HighlightDirective,
     CardsComponent,
     carComponents,
+    NgOnChangesParentComponent,
+    NgOnchangesChildComponent,
   ],
   imports: [
     BrowserModule

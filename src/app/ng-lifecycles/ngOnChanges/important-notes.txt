@@ -1,0 +1,7 @@
+This demo is to show the ngOnChanges call of child components.
+Normally it invokes before ngOnInit but the obvious misconception is that whenever the child component changes it should invoke. But this is not the case.
+
+This will ONLY be called when parent component changes the child component with @Input parameters.
+
+Also, even parent component changes the child component's @Input parameter, this will not call ngOnChanges if only object property is changed. 
+You need to replace the whole reference of the object.
